@@ -12,17 +12,19 @@ def add_book():
         "author": author,
         "available": True
     })
-    print("Book added successfully!\n")
+    print(f"Book '{title}' by {author} added successfully.")
 
-def view_books():
-    if not library:
-        print("No books available.\n")
-        return
+def search_book():
+    keyword = input("Enter book title or author to search: ").lower()
+    found = False
 
     for book in library:
-        status = "Available" if book["available"] else "Issued"
-        print(f"ID: {book['id']} | Title: {book['title']} | Author: {book['author']} | Status: {status}")
-    print()
+        if keyword in book["title"].lower() or keyword in book["author"].lower():
+            print(f"ID: {book['id']} | Title: {book['title']} | Author: {book['author']}")
+            found = True
+
+    if not found:
+        print("No matching books found.")
 
 def issue_book():
     book_id = input("Enter Book ID to issue: ")
@@ -56,7 +58,7 @@ def menu():
         if choice == "1":
             add_book()
         elif choice == "2":
-            view_books()
+            search_book()
         elif choice == "3":
             issue_book()
         elif choice == "4":
