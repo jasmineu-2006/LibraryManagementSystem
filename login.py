@@ -1,4 +1,5 @@
 def login():
+    print("Login Module")
 
     username = input("Enter username: ")
     password = input("Enter password: ")
@@ -6,7 +7,6 @@ def login():
     if username == "admin" and password == "admin123":
         print("Login successful")
         return True
-    else if:
     else:
         print("Invalid credentials")
         return False
