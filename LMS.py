@@ -49,7 +49,7 @@ def menu():
         print("Library Management System")
         print("1. Add Book")
         print("2. View Books")
-        print("3. Issue Book")
+        print("3. Search Book")
         print("4. Return Book")
         print("5. Exit")
 
