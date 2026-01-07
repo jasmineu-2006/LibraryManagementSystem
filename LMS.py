@@ -50,6 +50,8 @@ def menu():
         print("1. Add Book")
         print("2. View Books")
         print("3. Search Book")
+        print("2. Search Books")
+        print("3. View Books")
         print("4. Return Book")
         print("5. Exit")
 
