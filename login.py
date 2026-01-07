@@ -1,5 +1,5 @@
 def login():
-    print("Login module updated by teammate")
+    print("Login module Updated by teammate")
     username = input("Enter username: ")
     password = input("Enter password: ")
 
